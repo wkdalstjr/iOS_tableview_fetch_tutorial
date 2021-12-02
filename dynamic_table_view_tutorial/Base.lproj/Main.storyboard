@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lus-wa-Y5X">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--테이블뷰-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dynamic_table_view_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-Tv-TyO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QAB-Tv-TyO" secondAttribute="bottom" id="0hB-qN-UtM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QAB-Tv-TyO" secondAttribute="trailing" id="MPw-7c-qMF"/>
+                            <constraint firstItem="QAB-Tv-TyO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q3X-MK-wTr"/>
+                            <constraint firstItem="QAB-Tv-TyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xFW-1L-pzb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="테이블뷰" id="7wc-7z-jnu">
+                        <leftBarButtonItems>
+                            <barButtonItem title="앞에 추가" id="MxK-EV-cEq">
+                                <connections>
+                                    <action selector="barButtonAction:" destination="BYZ-38-t0r" id="GY6-qQ-MzK"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="데이터 리셋" id="ii7-KM-lPk">
+                                <connections>
+                                    <action selector="barButtonAction:" destination="BYZ-38-t0r" id="2gQ-px-Sbp"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="뒤에 추가" id="4h4-Vv-duo">
+                            <connections>
+                                <action selector="barButtonAction:" destination="BYZ-38-t0r" id="keh-7D-LB6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="appendButton" destination="4h4-Vv-duo" id="qCC-vb-70d"/>
+                        <outlet property="myTableView" destination="QAB-Tv-TyO" id="phT-AK-mjk"/>
+                        <outlet property="prependButton" destination="MxK-EV-cEq" id="c5D-ld-Gea"/>
+                        <outlet property="resetButton" destination="ii7-KM-lPk" id="tqk-oI-A8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F0G-aq-C9z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lus-wa-Y5X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rgj-Q0-ftr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tnw-J6-pXH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DA4-f7-p8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
